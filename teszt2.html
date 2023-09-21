@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal Példa</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Stílusok a footerhez */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Stílusok a navigációs sávhoz */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Stílusok a navigációs sáv linkekhez */
+        .navbar a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Chineese Blox Club</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tab1" href="#content1">Fül 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab2" href="#content2">Fül 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="tab3" href="#">Fül 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab4" href="#content4">Fül 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab5" href="#content5">Fül 5</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Tartalom -->
+<div class="container mt-4">
+    <div id="content1">
+        <h1>Fül 1 Tartalom</h1>
+        <p>Ez itt a Fül 1 tartalma.</p>
+    </div>
+    <div id="content2" style="display: none;">
+        <h1>Fül 2 Tartalom</h1>
+        <p>Ez itt a Fül 2 tartalma.</p>
+    </div>
+    <div id="content3" style="display: none;">
+        <h1>Fül 3 Tartalom</h1>
+        <p>Ez itt a Fül 3 tartalma.</p>
+    </div>
+    <div id="content4" style="display: none;">
+        <h1>Fül 4 Tartalom</h1>
+        <p>Ez itt a Fül 4 tartalma.</p>
+    </div>
+    <div id="content5" style="display: none;">
+        <h1>Fül 5 Tartalom</h1>
+        <p>Ez itt a Fül 5 tartalma.</p>
+    </div>
+</div>
+
+<script>
+    // JavaScript segítségével kezeljük a lapok közötti váltást
+    $(document).ready(function() {
+        $("#tab1").click(function() {
+            $("#content1").show();
+            $("#content2").hide();
+            $("#content3").hide();
+            $("#content4").hide();
+            $("#content5").hide();
+        });
+
+        $("#tab2").click(function() {
+            $("#content1").hide();
+            $("#content2").show();
+            $("#content3").hide();
+            $("#content4").hide();
+            $("#content5").hide();
+        });
+
+        $("#tab4").click(function() {
+            $("#content1").hide();
+            $("#content2").hide();
+            $("#content3").hide();
+            $("#content4").show();
+            $("#content5").hide();
+        });
+
+        $("#tab5").click(function() {
+            $("#content1").hide();
+            $("#content2").hide();
+            $("#content3").hide();
+            $("#content4").hide();
+            $("#content5").show();
+        });
+    });
+</script>
+
+<!-- Footer -->
+<div class="footer">
+    <p>&copy; 2023 Weboldal Példa</p>
+</div>
+
+</body>
+</html>

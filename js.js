@@ -8,8 +8,17 @@ triggerTabList.forEach(function (triggerEl) {
     console.log(triggerEl)
   })
 })*/
-
-/*var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
-var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-  return new bootstrap.Dropdown(dropdownToggleEl)
-})*/
+$(function() { // Dropdown toggle
+  $('.dropdown-toggle').click(function() { $(this).next('.dropdown').slideToggle();
+  });
+  
+  $(document).click(function(e) 
+  { 
+  var target = e.target; 
+  if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) 
+  //{ $('.dropdown').hide(); }
+    { $('.dropdown').slideUp(); }
+  });
+  });
+const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
