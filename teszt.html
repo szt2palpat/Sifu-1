@@ -32,6 +32,7 @@
         a{
     color: white;
     
+    
 }
 .nav-link{
     color: black;
@@ -54,6 +55,13 @@ img{
 body{
     height: 100vh;
 }
+#workout{
+    text-align: center;
+    font-size: x-large;
+}
+.nav-link{
+
+}
 
     </style>
 </head>
@@ -66,15 +74,15 @@ body{
 
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#home">Főoldal</a></li> 
-        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#aboutus">Rólunk</a></li> 
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" onclick="ab()" href="#aboutus">Rólunk</a></li> 
         <!--<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Quinda">Quinda</a></li>
         <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#Sanda">Sanda</a></li>-->
         <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#workout">Eddzések</a></li> 
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Szabályrendszerek</a>
+       <!-- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Szabályrendszerek</a>
         <ul class="dropdown-menu">
 <li><a class="dropdown-item" href="#Quinda">Quinda</a></li>
 <li><a class="dropdown-item" href="#Sanda">Sanda</a></li>
-        </ul>
+        </ul>-->
 </li>
                
     </ul>
@@ -184,9 +192,16 @@ body{
                 </h1>
                 <h1>Az első hét ingyenes, így semmit nem veszíthetsz ha el jössz. ☺
                 </h1>
+                <video id="rovid" width="320" height="240"  controls loop>
+                <source src="rövid.mp4" type="video/mp4">
+            </video>
+            <video id="hosszu"width="320" height="240" controls autoplay loop>
+                <source src="hosszu.mp4" type="video/mp4">
+            </video>
+            
         </div>
         
-<div class="container tab-pane fade" id="Quinda">
+<!--<div class="container tab-pane fade" id="Quinda">
     <h1>Qinda (Light Contact)
     </h1>
     <h1>Felszerelés:</h1>
@@ -658,9 +673,18 @@ Ide majd be teszünk egy képet valakiről teljes felszerelésben.
         Az iskola bejárata a telephelyen lévő nagy épület 
         jobb hátsó részén, a bambuszoknál van. 
         </p>
+        <!--ide kell egy térkép a helyről-->
+        
     </div>
 </div>
+ 
 </div>
+<script>
+   function ab(){
+document.getElementById("rovid").play
+document.getElementById("hosszu").play
+   } 
+</script>
 <footer class="bg-dark text-white text-center py-3">
     <p>www.chinese-boxing.hu    </p>   
     <p>e-mail: </p>
